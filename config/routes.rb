@@ -1,20 +1,22 @@
 Rails.application.routes.draw do
 
-  get 'event/index'
+  # get 'event/index'
 
-  get 'event/new'
+  # get 'event/new'
 
-  get 'event/create'
+  # get 'event/create'
 
-  get 'event/update'
+  # get 'event/update'
 
-  get 'event/delete'
+  # get 'event/delete'
 
-  get 'event/show'
+  # get 'event/show'
 
   root 'home#index'
 
   resources :user
+
+  resources :event
 
   #get 'sessions/new'
 

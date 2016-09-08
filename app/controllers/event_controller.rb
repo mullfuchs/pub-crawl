@@ -11,8 +11,8 @@ class EventController < ApplicationController
 
   def create
     @current_user = User.find(session[:user_id])
-    @event = Event.create(event_params)
-    redirect_to root_path
+    latest_event = Event.create(event_params)
+    redirect_to event_path(latest_event)
   end
 
   def update
@@ -22,12 +22,13 @@ class EventController < ApplicationController
   end
 
   def show
+    @event = Event.find(params[:id])
   end
 
   private
 
   def event_params
-    params.require(:event).permit(:title, :date, :time, :picture)
+    params.require(:event).permit(:name, :date, :time, :image)
   end
 
 end
