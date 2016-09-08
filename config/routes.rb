@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-  # get 'user/new'
+  # get 'user#new'
 
   # get 'user/create'
 
