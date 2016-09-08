@@ -1,0 +1,13 @@
+<h1>Create a new Pub Crawl</h1>
+
+<%= form_for :event do |f| %>
+  <%= f.text_field :name, placeholder: "What's the pub crawl called?" %>
+  <br>
+  <%= f.text_field :date, placeholder: "Enter a date" %>
+  <br>
+  <%= f.text_field :time, placeholder: "Enter a start time" %>
+  <br>
+  <%= f.text_field :image, placeholder: "hotlink an image" %>
+  <br>
+  <%= f.submit "Make it so" %>
+<% end %>

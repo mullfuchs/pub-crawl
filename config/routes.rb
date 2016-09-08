@@ -1,16 +1,22 @@
 Rails.application.routes.draw do
 
+  # get 'event/index'
+
+  # get 'event/new'
+
+  # get 'event/create'
+
+  # get 'event/update'
+
+  # get 'event/delete'
+
+  # get 'event/show'
+
   root 'home#index'
 
-  # get 'user#new'
-
-  # get 'user/create'
-
-  # get 'user/destroy'
-
-  # get 'user/show'
-
   resources :user
+
+  resources :event
 
   #get 'sessions/new'
 
@@ -22,5 +28,7 @@ Rails.application.routes.draw do
   get "createuser" => "user#new"
   post "user/new" => "user#create"
 
+  get "event/new" => "event#new"
+  post "event/new" => "event#create"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
