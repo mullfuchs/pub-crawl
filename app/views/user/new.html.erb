@@ -1,2 +1,8 @@
-<h1>User#new</h1>
-<p>Find me in app/views/user/new.html.erb</p>
+<h1>Create a new account</h1>
+
+<%= form_for :user do |f| %>
+  <%= f.text_field :email, placeholder: "Title your email" %>
+  <%= f.password_field :password, placeholder: "Enter your password" %>
+  <%= f.text_field :username, placeholder: "Enter your username" %>
+  <%= f.submit "register" %>
+<% end %>
