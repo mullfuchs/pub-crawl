@@ -14,14 +14,6 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-  # get 'user/new'
-
-  # get 'user/create'
-
-  # get 'user/destroy'
-
-  # get 'user/show'
-
   resources :user
 
   #get 'sessions/new'
@@ -34,5 +26,7 @@ Rails.application.routes.draw do
   get "createuser" => "user#new"
   post "user/new" => "user#create"
 
+  get "event/new" => "event#new"
+  post "event/new" => "event#create"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
