@@ -13,3 +13,38 @@
  *= require_tree .
  *= require_self
  */
+
+  @import "bootstrap-sprockets";
+  @import "bootstrap";
+
+/*  $font-stack:    Helvetica, sans-serif
+  $primary-color: #E84B41;*/
+
+  .navbar-default {
+    background-color: #EAE6DD;
+    color: #E84B41;
+  }
+
+  .navbar-brand, .icon-bar, .sr-only {
+    color: #E84B41;
+/*    background-color: #E84B41*/
+  }
+
+  .navbar-default .navbar-brand {
+        color: #E84B41;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 36px;
+  }
+
+.navbar-default .navbar-toggle {
+  border-color: #E84B41;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #E84B41;
+}
+
+.btn {
+  background-color: #E84B41;
+}
+
