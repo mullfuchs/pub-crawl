@@ -10,25 +10,9 @@ class EventController < ApplicationController
   end
 
   def create
-    # puts event_params.inspect
-    # puts event_params.[:image].path
     @current_user = User.find(session[:user_id])
-    #latest_event = Event.create(event_params)
-    # redirect_to event_path(latest_event)
-
-    uploaded_file = event_params[:image].path
-    cloudinary_file = Cloudinary::Uploader.upload(uploaded_file)
-       # render json: cloudinary_file
-    new_event = {
-      :name => event_params[:name],
-      :date => event_params[:date],
-      :time => event_params[:time],
-      :image => cloudinary_file['public_id'],
-      :location_ids => event_params[:location_ids]
-    }
-    current_event = Event.create(new_event)
-    redirect_to event_path(current_event)
-
+    latest_event = Event.create(event_params)
+    redirect_to event_path(latest_event)
   end
 
   def update
