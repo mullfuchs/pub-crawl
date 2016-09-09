@@ -17,49 +17,89 @@
   @import "bootstrap-sprockets";
   @import "bootstrap";
 
-/*  $font-stack:    Helvetica, sans-serif
-  $primary-color: #E84B41;*/
-  /*$secondary-color: #F3F3F1*/
-  /*$tertiary-color: #262626*/
+  $font-stack:    'Open Sans', sans-serif;
+  $primary-color: #E84B41;
+  $secondary-color: #F3F3F1; 
+  $tertiary-color: #262626;
   /*#A43F38*/
+
+ body {
+  background-color:  $secondary-color;
+  height: 100%;
+ }
+
+ p {
+  margin: 20px;
+ }
 
   .navbar {
     margin-bottom: 0;
   }
 
   .navbar-default {
-    background-color: #EAE6DD;
-    color: #E84B41;
+    background-color: $tertiary-color;
+    color: $primary-color;
   }
 
   .navbar-brand, .icon-bar, .sr-only {
-    color: #E84B41;
+    color: $primary-color;
 /*    background-color: #E84B41*/
   }
 
   .navbar-default .navbar-brand {
-        color: #E84B41;
+        color: $primary-color;
         font-family: 'Open Sans', sans-serif;
         font-size: 36px;
   }
 
+  .navbar-nav li {
+      text-align: center;
+    }
+
+  .navbar-default .navbar-nav li a {
+        color: $primary-color;
+        font-size: 16px;
+      }
+
+
+/*  .navbar-default .navbar-nav {
+  ul {
+
+  li { text-align: center; }
+
+  a {
+    color: $primary-color;
+  }
+  }
+}*/
+
   .navbar-default .navbar-toggle {
-    border-color: #E84B41;
+    border-color: $primary-color;
   }
 
   .navbar-default .navbar-toggle .icon-bar {
-    background-color: #E84B41;
+    background-color: $primary-color;
   }
 
   .btn {
+    background-color: $primary-color;
     background-color: #E84B41;
     border: white;
   }
 
   .jumbotron {
       background-image: image-url("people-hotel-bar-drinks.jpg");
-      background-size: 100%;
-      height: 500px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      /*height: 100vh;*/
       color: #fff;
+      margin-bottom: 0;
+      /*padding-bottom: 10px;*/
   }
+
+.jumbotron img {
+  height: 200px;
+  margin: 10px;
+}
+
 
