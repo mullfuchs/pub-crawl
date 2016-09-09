@@ -27,10 +27,8 @@ class EventController < ApplicationController
   end
 
   def addlocation
-    #new_location = Location.create(location_params)
     current_event = Event.find(params[:id])
     current_event.locations.create(location_params)
-    #current_event.location_ids.push(new_location[:id])
     redirect_to event_path(Event.find(params[:id]))
   end
 
