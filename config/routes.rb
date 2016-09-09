@@ -28,10 +28,13 @@ Rails.application.routes.draw do
   get "createuser" => "user#new"
   post "user/new" => "user#create"
 
+  get "crawls" => "event#index"
   get "event/new" => "event#new"
   post "event/new" => "event#create"
 
   post "event/:id" => "event#addlocation"
+
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
