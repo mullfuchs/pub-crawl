@@ -14,18 +14,33 @@
  *= require_self
  */
 
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
   @import "bootstrap-sprockets";
   @import "bootstrap";
 
-  $font-stack:    'Open Sans', sans-serif;
-  $primary-color: #E84B41;
-  $secondary-color: #F3F3F1; 
-  $tertiary-color: #262626;
+  $head-font:'Open Sans', sans-serif;
+  $pair-font:'Source Sans Pro', sans-serif;
+  $red: #E84B41;
+  $offwhite: #F5EEDE; 
+  $black: #262626;
   /*#A43F38*/
 
  body {
-  background-color:  $secondary-color;
+  background-color:  $offwhite;
   height: 100%;
+  font-family: $pair-font;
+
+ }
+
+ h1, h2, h3 {
+  font-family: $head-font;
+  font-weight: 600;
  }
 
  p {
@@ -37,18 +52,18 @@
   }
 
   .navbar-default {
-    background-color: $tertiary-color;
-    color: $primary-color;
+    background-color: $black;
+    color: $red;
   }
 
   .navbar-brand, .icon-bar, .sr-only {
-    color: $primary-color;
+    color: $red;
 /*    background-color: #E84B41*/
   }
 
   .navbar-default .navbar-brand {
-        color: $primary-color;
-        font-family: 'Open Sans', sans-serif;
+        color: $red;
+        font-family: $head-font;
         font-size: 36px;
   }
 
@@ -57,32 +72,20 @@
     }
 
   .navbar-default .navbar-nav li a {
-        color: $primary-color;
+        color: $red;
         font-size: 16px;
       }
 
-
-/*  .navbar-default .navbar-nav {
-  ul {
-
-  li { text-align: center; }
-
-  a {
-    color: $primary-color;
-  }
-  }
-}*/
-
   .navbar-default .navbar-toggle {
-    border-color: $primary-color;
+    border-color: $red;
   }
 
   .navbar-default .navbar-toggle .icon-bar {
-    background-color: $primary-color;
+    background-color: $red;
   }
 
   .btn {
-    background-color: $primary-color;
+    background-color: $red;
     border: white;
     float: none;
   }
@@ -100,6 +103,11 @@
 .jumbotron img {
   height: 215px;
   margin: 10px;
+}
+
+.well {
+  background-color: #E84B41;
+  margin: 20px 60px;
 }
 
 
