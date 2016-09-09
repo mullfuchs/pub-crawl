@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   resources :user
 
-  resources :event
+  resources :event 
 
   #get 'sessions/new'
 
@@ -30,5 +30,8 @@ Rails.application.routes.draw do
 
   get "event/new" => "event#new"
   post "event/new" => "event#create"
+
+  post "event/:id" => "event#addlocation"
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

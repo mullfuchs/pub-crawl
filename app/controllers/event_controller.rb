@@ -16,6 +16,7 @@ class EventController < ApplicationController
   end
 
   def update
+
   end
 
   def delete
@@ -25,10 +26,23 @@ class EventController < ApplicationController
     @event = Event.find(params[:id])
   end
 
+  def addlocation
+    #new_location = Location.create(location_params)
+    current_event = Event.find(params[:id])
+    current_event.locations.create(location_params)
+    #current_event.location_ids.push(new_location[:id])
+    redirect_to event_path(Event.find(params[:id]))
+  end
+
   private
 
   def event_params
-    params.require(:event).permit(:name, :date, :time, :image)
+    params.require(:event).permit(:name, :date, :time, :image, :location_ids => [])
   end
+
+  def location_params
+    params.require(:location).permit(:name, :address, :latitude, :longitude, :arrivetime, :departtime)
+  end
+
 
 end
