@@ -1,5 +1,5 @@
 <div class="navbar navbar-default navbar-static-top">
-  <div class="container">
+  <div class="container fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle Navigation</span>
@@ -7,15 +7,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">CRWL</a>
+      <a class="navbar-brand" href="/">CRWL</a>
     </div> <!-- end div class="navbar-header" -->
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><%= link_to "Crawls" %></li>
-        <li><%= link_to "Create a Crawl" %></li>
-        <li><%= link_to "My Account" %></li>
-        <li><%= link_to "Signup" %></li>
-        <li><%= link_to "Logout" %></li>
+        <li><%= link_to "Crawls", "/crawls" %></li>
+        <li><%= link_to "Create a Crawl", "event/new" %></li>
+        <li><%= link_to "Profile", @user %></li>
+        <li><%= link_to "Signup", "createuser" %></li>
+        <li><%= link_to "Login", "login" %></li>
+        <li><%= link_to "Logout", "logout", :method => "delete" %></li>
       </ul>
     </div> <!-- end div class="collapse navbar-collapse" -->
   </div> <!-- end div class="container" -->
