@@ -3,7 +3,7 @@
 <%= form_for :event do |f| %>
   <%= f.text_field :name, placeholder: "What's the pub crawl called?" %>
   <br>
-  <%= f.text_field :date, placeholder: "Enter a date" %>
+  <%= f.date_select :date, placeholder: "Enter a date" %>
   <br>
   <%= f.text_field :time, placeholder: "Enter a start time" %>
   <br>
