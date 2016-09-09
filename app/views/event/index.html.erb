@@ -1,7 +1,8 @@
 <h1>CRAWLS</h1>
 <% @events.each do |event| %>
-<h3> <%= event.name %> </h3>
-<h4> <%= event.date %> </h4>
-<h4> <%= event.time %> </h4>
-<a href="/event/<%=event.id%>">Check this crawl out</a>
+<a href="/event/<%=event.id%>"><div class="well">
+<h3><%= event.name %> </h3>
+<h4 id="eventDate"><%= event.date %> </h4>
+<h4 id="eventTime"><%= event.time %> </h4>
 <% end %>
+</div></a>
