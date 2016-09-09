@@ -1,6 +1,6 @@
 <h1>Create a new Pub Crawl</h1>
 
-<div class="form">
+<div class="well">
 <%= form_for :event, :html => {:class => "form-horizontal center"} do |f| %>
 <div class="form-group">
   <%= f.label :name, "Title:", class: "col-md-4 control-label" %>
@@ -10,30 +10,31 @@
   </div>
   <br>
   <div class="form-group">
-    <%= f.label :name, "Date:", class: "col-md-4 control-label" %>
+    <%= f.label :date, "Date:", class: "col-md-4 control-label" %>
   <div class="col-md-8">
   <%= f.date_field :date, placeholder: "Enter a date", class: "form-control input-lg" %>
   </div>
   </div>
   <br>
   <div class="form-group">
-    <%= f.label :name, "Time:", class: "col-md-4 control-label" %>
+    <%= f.label :time, "Time:", class: "col-md-4 control-label" %>
   <div class="col-md-8">
   <%= f.time_field :time, placeholder: "Enter a start time", class: "form-control input-lg"  %>
   </div>
   </div>
   <br>
   <div class="form-group">
-    <%= f.label :name, "Attach Image(optional):", class: "col-md-4 control-label" %>
+    <%= f.label :image, "Attach Image(optional):", class: "col-md-4 control-label" %>
   <div class="col-md-8">
   <%= f.file_field :image, placeholder: "Attach an image", class: "form-control input-lg"  %>
   </div>
   </div>
-  <br>
+    <div class="form-group">
   <div class="btn">
-  <%= f.submit "Make it so", class: "btn btn-primary btn-lg", class: "form-control input-lg" %>
-  </div>
+  <%= f.submit "Make it so", class: "btn btn-primary btn-lg m-x-auto" %>
 <% end %>
+  </div>
+  </div>
 </div>
 
 
