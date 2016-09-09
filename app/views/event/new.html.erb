@@ -1,13 +1,70 @@
 <h1>Create a new Pub Crawl</h1>
 
-<%= form_for :event do |f| %>
-  <%= f.text_field :name, placeholder: "What's the pub crawl called?" %>
+<div class="form">
+<%= form_for :event, :html => {:class => "form-horizontal center"} do |f| %>
+<div class="form-group">
+  <%= f.label :name, "Title:", class: "col-md-4 control-label" %>
+  <div class="col-md-8">
+  <%= f.text_field :name, placeholder: "What's the pub crawl called?", class: "form-control input-lg" %>
+  </div>
+  </div>
   <br>
-  <%= f.date_select :date, placeholder: "Enter a date" %>
+  <div class="form-group">
+    <%= f.label :name, "Date:", class: "col-md-4 control-label" %>
+  <div class="col-md-8">
+  <%= f.date_field :date, placeholder: "Enter a date", class: "form-control input-lg" %>
+  </div>
+  </div>
   <br>
-  <%= f.text_field :time, placeholder: "Enter a start time" %>
+  <div class="form-group">
+    <%= f.label :name, "Time:", class: "col-md-4 control-label" %>
+  <div class="col-md-8">
+  <%= f.text_field :time, placeholder: "Enter a start time", class: "form-control input-lg"  %>
+  </div>
+  </div>
   <br>
-  <%= f.text_field :image, placeholder: "hotlink an image" %>
+  <div class="form-group">
+    <%= f.label :name, "Attach Image(optional):", class: "col-md-4 control-label" %>
+  <div class="col-md-8">
+  <%= f.file_field :image, placeholder: "Attach an image", class: "form-control input-lg"  %>
+  </div>
+  </div>
   <br>
-  <%= f.submit "Make it so" %>
+  <div class="btn">
+  <%= f.submit "Make it so", class: "btn btn-primary btn-lg", class: "form-control input-lg" %>
+  </div>
 <% end %>
+</div>
+
+
+<!-- 
+       <div class="wrapper">
+    <form method="post" action="" class="ccform">
+    <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-user fa-2x"></i></span>
+        <input class="ccformfield" type="text" placeholder="Full Name" required>
+    </div>
+    <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-envelope fa-2x"></i></span>
+        <input class="ccformfield" type="text" placeholder="Email" required>
+    </div>
+    <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-mobile-phone fa-2x"></i></span>
+        <input class="ccformfield" type="text" placeholder="Phone">
+    </div>
+     <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-info fa-2x"></i></span>
+        <input class="ccformfield" type="text" placeholder="Subject" required>
+    </div>
+    <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-comment fa-2x"></i></span>
+        <textarea class="ccformfield" name="comments" rows="8" placeholder="Message" required></textarea>
+    </div>
+    <div class="ccfield-prepend">
+        <input class="ccbtn" type="submit" value="Submit">
+    </div>
+    </form>
+</div>
+<div class="credit">
+<em>Credit</em><a href="http://codeconvey.com/2014/02/22/creating-simple-html5-contact-form/" target="_blank">HTML5 Contact Form  - Codevonvey.com</a>
+</div> -->
