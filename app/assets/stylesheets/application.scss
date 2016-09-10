@@ -108,7 +108,11 @@
 
 .well {
   background-color: #E84B41;
-  margin: 20px 60px;
+  // margin: 20px 60px;
+}
+
+.well .btn {
+  background-color: $black;
 }
 
 
