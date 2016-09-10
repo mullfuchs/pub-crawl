@@ -1,7 +1,27 @@
 // Place all the styles related to the event controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+  $head-font:'Open Sans', sans-serif;
+  $pair-font:'Source Sans Pro', sans-serif;
+  $red: #E84B41;
+  $offwhite: #F5EEDE; 
+  $black: #262626;
+  /*#A43F38*/
 
 h3 {
   text-align: center;
 }
+
+.crawls-well {
+  border: 5px solid #E84B41;
+  margin: 20px 0;
+}
+
+ a .crawls-well{
+  text-decoration: none;
+  color: $black;
+ }
+
+  a > .crawls-well > h3:hover {
+  text-decoration: none;
+ }
