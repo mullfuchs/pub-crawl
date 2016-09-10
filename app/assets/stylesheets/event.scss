@@ -5,3 +5,15 @@
 h3 {
   text-align: center;
 }
+
+.crawls-well {
+  border: 8px solid #E84B41;
+}
+
+ a .crawls-well h3{
+  text-decoration: none;
+ }
+
+  a > .crawls-well > h3:hover {
+  text-decoration: none;
+ }
