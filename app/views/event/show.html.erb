@@ -1,5 +1,5 @@
 <h1><%= @event.name %></h1>
-<h2>an event by <%= @event.users[0].username %></h2> 
+<h2>an event by <%= @event.users[@event.users.length - 1].username %></h2> 
 <br>
 <h2 id="eventDate"><%= @event.date %></h2>
 <h2 id="eventTime"><%= @event.time %></h2>
@@ -13,30 +13,37 @@
 <h3>Locations:</h3>
 <ul>
   <% @event.locations.each do |location| %>
+    
     <li> <%= location.name %> / <%= location.address %> /Arrive: <%= location.arrivetime %> /Leave <%= location.departtime %> </li>
 
   <% end %>
 </ul>
 
-<p>add a location to this pub crawl</p>
+<% if @user == @event.users[@event.users.length - 1] %>
+  <h3> Event Admin </h3>
 
-#:name, :address, :arrivetime, :departtime
+  <p>Done at an event? mark it!</p>
 
-<%= form_for :location do |f| %>
-  <%= f.text_field :name, placeholder: "what's this place called?" %>
-  <br>
-  <%= f.text_field :address, placeholder: "What's it's address" %>
-  <br>
-  <%= f.text_field :arrivetime, placeholder: "Enter a start time" %>
-  <br>
-  <%= f.text_field :departtime, placeholder: "when are ya gonna leave?" %>  
-  <br>
-  <%= f.text_field :latitude, placeholder: "lat (approx)" %>  
-  <br>
-  <%= f.text_field :longitude, placeholder: "long (approx)" %>
-  <br>
-  <%= f.submit "add it" %>
+
+
+  <p>add a location to this pub crawl</p>
+
+
+  <%= form_for :location do |f| %>
+    <%= f.text_field :name, placeholder: "what's this place called?" %>
+    <br>
+    <%= f.text_field :address, placeholder: "What's it's address" %>
+    <br>
+    <%= f.text_field :arrivetime, placeholder: "Enter a start time" %>
+    <br>
+    <%= f.text_field :departtime, placeholder: "when are ya gonna leave?" %>  
+    <br>
+    <%= f.text_field :latitude, placeholder: "lat (approx)" %>  
+    <br>
+    <%= f.text_field :longitude, placeholder: "long (approx)" %>
+    <br>
+    <%= f.submit "add it" %>
+  <% end %>
 <% end %>
-
 
 <a href="join/<%=@event.id%>">Join this crawl</a>
