@@ -115,4 +115,18 @@
   background-color: $black;
 }
 
+.headerImg {
+  width: 100%;
+}
 
+.eventTitle {
+  background-image: 
+    linear-gradient($red, $black);
+  color: white;
+  margin: 0;
+  height: 45px;
+}
+
+.headerImg img {
+  width: 100%;
+}
