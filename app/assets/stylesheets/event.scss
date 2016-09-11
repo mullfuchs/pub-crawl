@@ -1,6 +1,4 @@
-// Place all the styles related to the event controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
   $head-font:'Open Sans', sans-serif;
   $pair-font:'Source Sans Pro', sans-serif;
   $red: #E84B41;
@@ -11,6 +9,12 @@
 h3 {
   text-align: center;
 }
+
+/*
+  ========================================
+  All Crawls Page
+  ========================================
+*/
 
 .crawls-well {
   background-color: $black;
@@ -44,20 +48,14 @@ h3 {
   text-decoration: none;
  }
 
- .dateTime {
-  display: inline-block;
- }
 
- // Event Detail Page
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
 
- .event-detail {
-  border: 2px solid #000;
- }
 
- .event-image {
-  width: 100vw;
-  height: 300px;
- }
 
  
 
