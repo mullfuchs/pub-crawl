@@ -85,11 +85,13 @@
     background-color: $red;
   }
 
-  .btn {
+  a.btn {
     background-color: $red;
     border: white;
-    float: none;
+    float: none !important;
+    width: 200px;
   }
+
 
   .jumbotron {
       background-image: image-url("people-hotel-bar-drinks.jpg");
