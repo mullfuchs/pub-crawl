@@ -1,8 +1,15 @@
+<!-- Google Maps Goes here -->
+<div class="container-fluid event-detail">
+<div class="event-image">
+<%= cl_image_tag(@event.image)%>
+</div>
 <h1><%= @event.name %></h1>
 <h2>an event by <%= @event.users[0].username %></h2> 
 <br>
 <h2 id="eventDate"><%= @event.date %></h2>
 <h2 id="eventTime"><%= @event.time %></h2>
+<<<<<<< HEAD
+=======
 <%= cl_image_tag(@event.image)%>
 <h3>People involved in this crawl</h3>
   <ul>
@@ -10,6 +17,7 @@
       <li> <%= user.username %> </li>
     <% end %>
   </ul>
+>>>>>>> b508ed8e03cee0b0d0fcae011d7c5d10193034af
 <h3>Locations:</h3>
 <ul>
   <% @event.locations.each do |location| %>
@@ -17,6 +25,7 @@
 
   <% end %>
 </ul>
+</div>
 
 <p>add a location to this pub crawl</p>
 
