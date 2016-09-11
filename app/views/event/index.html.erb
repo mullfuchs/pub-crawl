@@ -2,15 +2,11 @@
 <% @events.each do |event| %>
 
 <a href="/event/<%=event.id%>"><div class="container crawls-well">
-<a href="/event/<%=event.id%>">
-<div class="well">
 
 <h3><%= event.name %> </h3>
 <h4 id="eventDate"><%= event.date %> </h4>
 <h4 id="eventTime"><%= event.time %> </h4>
 </div></a>
-
-<% end %>
 
 <% end %>
 
