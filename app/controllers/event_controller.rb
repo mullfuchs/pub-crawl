@@ -41,6 +41,7 @@ class EventController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @user = User.find(session[:user_id])
   end
 
   def addlocation
