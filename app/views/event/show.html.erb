@@ -20,21 +20,24 @@
 <h3>Locations:</h3>
 <ul>
   <% @event.locations.each do |location| %>
-    
-    <li> <%= location.name %> / <%= location.address %> /Arrive: <%= location.arrivetime %> /Leave <%= location.departtime %> </li>
-
+    <% if !location.has_been_visited %>
+      <li> <%= location.name %> / <%= location.address %> /Arrive: <%= location.arrivetime %> /Leave <%= location.departtime %> </li>
+    <% else %>
+      <li> <strike> <%= location.name %> / <%= location.address %> /Arrive: <%= location.arrivetime %> /Leave <%= location.departtime %> </strike> </li>
+    <% end %>
   <% end %>
 </ul>
 
 <% if @user == @event.users[@event.users.length - 1] %>
   <h3> Event Admin </h3>
+  <p>Mark a location as visited</p>
+    <% @event.locations.each do |location| %>
+    
+    <li> <%= location.name %> / <%= location.address %> <a href="left/<%= @event.id %>/<%=location.id%>"> Mark as left </a></li>
+
+  <% end %>
 
   <p>Add a Stop To This Crawl</p>
-
-
-
-  <p>add a location to this pub crawl</p>
-
 
   <%= form_for :location do |f| %>
     <%= f.text_field :name, placeholder: "what's this place called?" %>

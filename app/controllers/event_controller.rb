@@ -58,6 +58,14 @@ class EventController < ApplicationController
     redirect_to event_path(current_event)
   end
 
+  def leavelocation
+    current_event = Event.find (params[:event_id])
+    location = Location.find(params[:loc_id])
+    location.update(has_been_visited: true)
+    
+    redirect_to event_path(current_event)
+  end
+
   private
 
   def event_params
