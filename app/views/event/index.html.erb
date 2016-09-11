@@ -1,12 +1,28 @@
 <h1>CRAWLS</h1>
+<div class="container-fluid">
 <% @events.each do |event| %>
 
 <a href="/event/<%=event.id%>"><div class="container crawls-well">
 
-<h3><%= event.name %> </h3>
-<h4 id="eventDate"><%= event.date %> </h4>
-<h4 id="eventTime"><%= event.time %> </h4>
+<a href="/event/<%=event.id%>">
+<!-- <div class="crawls-well"> removed double well KD -->
+<div class="row">
+<div class="col-xs-8">
+<h3 class="text-left"><%= event.name %> </h3>
+</div>
+<div class="col-xs-4">
+<!-- <i class="fa fa-calendar" aria-hidden="true"></i> -->
+<h4 class= "text-right" id="eventDate"><%=event.date%></h4>
+<h4 class= "text-right" id="eventTime"><%= event.time %> </h4>
+</div>
+</div> <!-- end div class="row" -->
+<div class='divLast'>
+</div>
 </div></a>
 
+
+
 <% end %>
+
+</div>
 
