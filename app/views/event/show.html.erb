@@ -1,51 +1,54 @@
-<!-- Google Maps Goes here -->
-<div class="container-fluid event-detail">
-<div class="event-image">
-<%= cl_image_tag(@event.image)%>
-</div>
-<h1><%= @event.name %></h1>
-<h2>an event by <%= @event.users[0].username %></h2> 
-<br>
+
+<!-- <h1><%= @event.name %></h1>
+<h2>an event by <%= @event.users[@event.users.length - 1].username %></h2> 
+<br> -->
+
+<div class="headerImg"><%= cl_image_tag(@event.image)%></div>
+<h1 class="eventTitle"><%= @event.name %></h1>
+
 <h2 id="eventDate"><%= @event.date %></h2>
 <h2 id="eventTime"><%= @event.time %></h2>
-<<<<<<< HEAD
-=======
-<%= cl_image_tag(@event.image)%>
-<h3>People involved in this crawl</h3>
+
+<h3>People Involved In This Crawl</h3>
   <ul>
     <% @event.users.each do |user| %>
       <li> <%= user.username %> </li>
     <% end %>
+<a href="join/<%=@event.id%>">Join this crawl</a>
   </ul>
->>>>>>> b508ed8e03cee0b0d0fcae011d7c5d10193034af
 <h3>Locations:</h3>
 <ul>
   <% @event.locations.each do |location| %>
+    
     <li> <%= location.name %> / <%= location.address %> /Arrive: <%= location.arrivetime %> /Leave <%= location.departtime %> </li>
 
   <% end %>
 </ul>
-</div>
 
-<p>add a location to this pub crawl</p>
+<% if @user == @event.users[@event.users.length - 1] %>
+  <h3> Event Admin </h3>
 
-#:name, :address, :arrivetime, :departtime
+  <p>Add a Stop To This Crawl</p>
 
-<%= form_for :location do |f| %>
-  <%= f.text_field :name, placeholder: "what's this place called?" %>
-  <br>
-  <%= f.text_field :address, placeholder: "What's it's address" %>
-  <br>
-  <%= f.text_field :arrivetime, placeholder: "Enter a start time" %>
-  <br>
-  <%= f.text_field :departtime, placeholder: "when are ya gonna leave?" %>  
-  <br>
-  <%= f.text_field :latitude, placeholder: "lat (approx)" %>  
-  <br>
-  <%= f.text_field :longitude, placeholder: "long (approx)" %>
-  <br>
-  <%= f.submit "add it" %>
+
+
+  <p>add a location to this pub crawl</p>
+
+
+  <%= form_for :location do |f| %>
+    <%= f.text_field :name, placeholder: "what's this place called?" %>
+    <br>
+    <%= f.text_field :address, placeholder: "What's it's address" %>
+    <br>
+    <%= f.text_field :arrivetime, placeholder: "Enter a start time" %>
+    <br>
+    <%= f.text_field :departtime, placeholder: "when are ya gonna leave?" %>  
+    <br>
+    <%= f.text_field :latitude, placeholder: "lat (approx)" %>  
+    <br>
+    <%= f.text_field :longitude, placeholder: "long (approx)" %>
+    <br>
+    <%= f.submit "Add Stop" %>
+  <% end %>
 <% end %>
 
-
-<a href="join/<%=@event.id%>">Join this crawl</a>
