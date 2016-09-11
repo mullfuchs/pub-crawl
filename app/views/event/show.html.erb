@@ -1,3 +1,9 @@
+
+<!-- <h1><%= @event.name %></h1>
+<h2>an event by <%= @event.users[@event.users.length - 1].username %></h2> 
+<br> -->
+
+
 <div class="headerImg"><%= cl_image_tag(@event.image)%></div>
 <h1 class="eventTitle"><%= @event.name %></h1>
 
@@ -14,27 +20,35 @@
 <h3>Locations:</h3>
 <ul>
   <% @event.locations.each do |location| %>
+    
     <li> <%= location.name %> / <%= location.address %> /Arrive: <%= location.arrivetime %> /Leave <%= location.departtime %> </li>
 
   <% end %>
 </ul>
 
-<p>Add a Stop To This Crawl</p>
+<% if @user == @event.users[@event.users.length - 1] %>
+  <h3> Event Admin </h3>
 
-#:name, :address, :arrivetime, :departtime
+  <p>Add a Stop To This Crawl</p>
 
-<%= form_for :location do |f| %>
-  <%= f.text_field :name, placeholder: "what's this place called?" %>
-  <br>
-  <%= f.text_field :address, placeholder: "What's it's address" %>
-  <br>
-  <%= f.text_field :arrivetime, placeholder: "Enter a start time" %>
-  <br>
-  <%= f.text_field :departtime, placeholder: "when are ya gonna leave?" %>  
-  <br>
-  <%= f.text_field :latitude, placeholder: "lat (approx)" %>  
-  <br>
-  <%= f.text_field :longitude, placeholder: "long (approx)" %>
-  <br>
-  <%= f.submit "Add Stop" %>
+
+
+  <p>add a location to this pub crawl</p>
+
+
+  <%= form_for :location do |f| %>
+    <%= f.text_field :name, placeholder: "what's this place called?" %>
+    <br>
+    <%= f.text_field :address, placeholder: "What's it's address" %>
+    <br>
+    <%= f.text_field :arrivetime, placeholder: "Enter a start time" %>
+    <br>
+    <%= f.text_field :departtime, placeholder: "when are ya gonna leave?" %>  
+    <br>
+    <%= f.text_field :latitude, placeholder: "lat (approx)" %>  
+    <br>
+    <%= f.text_field :longitude, placeholder: "long (approx)" %>
+    <br>
+    <%= f.submit "Add Stop" %>
+  <% end %>
 <% end %>
