@@ -3,6 +3,7 @@
 <h2>an event by <%= @event.users[@event.users.length - 1].username %></h2> 
 <br> -->
 
+
 <div class="headerImg"><%= cl_image_tag(@event.image)%></div>
 <h1 class="eventTitle"><%= @event.name %></h1>
 
@@ -51,4 +52,3 @@
     <%= f.submit "Add Stop" %>
   <% end %>
 <% end %>
-
