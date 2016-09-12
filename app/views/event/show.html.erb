@@ -4,8 +4,8 @@
   <h1 id="eventTitle" class="text-center"><%= @event.name %></h1>
   <div><%= cl_image_tag(@event.image)%></div>
 </div>
-
-<div class="container crawls-well show-margin">
+<!-- <div class="container-fluid"> -->
+<div class="container-fluid crawls-well show-margin">
 <div class="row">
 <div class="col-xs-8">
 <h3 id="eventDate" class="text-left"><%= @event.date %></h3>
@@ -17,14 +17,16 @@
 <div class='divLast'>
 </div>
 </div>
-<div class="container locations">
+<!-- </div> -->
+<div class="container-fluid locations">
 <h3>Crwlers</h3>
   <ul>
     <% @event.users.each do |user| %>
-      <li> <%= user.username %> </li>
+
+      <li><img src="<%= image_path('pub-crawl-icon3.png') %>" class="user-join"><%= user.username %> </li>
     <% end %>
-<a href="join/<%=@event.id%>">Join this crawl</a>
   </ul>
+  <button id="join-button"><a href="join/<%=@event.id%>">Join</a></button>
 <h3>Locations:</h3>
 <ul>
   <% @event.locations.each do |location| %>
@@ -70,6 +72,7 @@
   <% end %>
     <a class="btn btn-danger" href="delete/<%=@event.id%>"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> NUKE THIS CRAWL <span class="glyphicon glyphicon-fire" aria-hidden="true"></span></a>
 <% end %>
+
 
 
 
