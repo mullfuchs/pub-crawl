@@ -36,6 +36,8 @@ Rails.application.routes.draw do
 
   get "event/join/:id" => "event#join"
 
+  get "event/delete/:id" => "event#delete"
+
   get "event/left/:event_id/:loc_id" => "event#leavelocation"
 
 

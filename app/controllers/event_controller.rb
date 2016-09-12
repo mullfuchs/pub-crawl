@@ -37,6 +37,11 @@ class EventController < ApplicationController
   end
 
   def delete
+    
+    Event.find(params[:id]).destroy
+
+    flash[:danger] = "Crawl deleted, this is probably for the best..."
+    redirect_to root_path
   end
 
   def show
