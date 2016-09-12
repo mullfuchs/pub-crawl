@@ -176,6 +176,14 @@ a > .crawls-well > h3:hover {
     background-color: $black;
     color: $offwhite;
 
+}
+
+#map { 
+  margin: 10px, 10px;
+  width: 100%;
+  height: 400px; 
+}
+
     li {
       list-style: none;
       display: inline-block;

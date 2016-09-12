@@ -1,4 +1,5 @@
 
+
 <div class="headerImg">
   <h1 id="eventTitle" class="text-center"><%= @event.name %></h1>
   <div><%= cl_image_tag(@event.image)%></div>
@@ -37,6 +38,12 @@
   <% end %>
 </ul>
 
+<div id="map">MAP GOES HERE</div>
+
+</div>
+
+
+
 <% if @user == @event.users[@event.users.length - 1] %>
   <h3> Event Admin </h3>
   <p>Mark a location as visited</p>
@@ -63,12 +70,20 @@
     <br>
     <%= f.submit "Add Stop" %>
   <% end %>
-
+    <a class="btn btn-danger" href="delete/<%=@event.id%>"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> NUKE THIS CRAWL <span class="glyphicon glyphicon-fire" aria-hidden="true"></span></a>
 <% end %>
-</div>
-
-
-  <a class="btn btn-danger" href="delete/<%=@event.id%>"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> NUKE THIS CRAWL <span class="glyphicon glyphicon-fire" aria-hidden="true"></span></a>
 
 
 
+
+<script src="<%=@map_url%>" async defer></script>
+
+<script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 47.6205, lng: -122.3493},
+          zoom: 8
+        });
+      }
+</script>
