@@ -36,6 +36,9 @@ Rails.application.routes.draw do
 
   get "event/join/:id" => "event#join"
 
+  get "event/delete/:id" => "event#delete"
+
+  get "event/left/:event_id/:loc_id" => "event#leavelocation"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

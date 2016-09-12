@@ -95,11 +95,13 @@
     background-color: $red;
   }
 
-  .btn {
+  a.btn {
     background-color: $red;
     border: white;
-    float: none;
+    float: none !important;
+    width: 200px;
   }
+
 
   /*
   ========================================

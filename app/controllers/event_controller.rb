@@ -37,6 +37,11 @@ class EventController < ApplicationController
   end
 
   def delete
+    
+    Event.find(params[:id]).destroy
+
+    flash[:danger] = "Crawl deleted, this is probably for the best..."
+    redirect_to root_path
   end
 
   def show
@@ -55,6 +60,14 @@ class EventController < ApplicationController
     current_event = Event.find(params[:id])
     current_event.users.push(current_user)
     flash[:success] = "You joined the event! GET PSYCHED"
+    redirect_to event_path(current_event)
+  end
+
+  def leavelocation
+    current_event = Event.find (params[:event_id])
+    location = Location.find(params[:loc_id])
+    location.update(has_been_visited: true)
+    
     redirect_to event_path(current_event)
   end
 
