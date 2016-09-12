@@ -130,6 +130,8 @@ a > .crawls-well > h3:hover {
 }
 
 #join-button {
+    display: block;
+    margin: 0 auto;
     outline: none;
     height: 40px;
     text-align: center;
@@ -176,5 +178,7 @@ a > .crawls-well > h3:hover {
 
     li {
       list-style: none;
+      display: inline-block;
     }
+
 }
