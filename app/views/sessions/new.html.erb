@@ -1,5 +1,5 @@
-<h1>Welcome Back!</h1>
-<br>
+<div class="container">
+<h1 class="text-center">Welcome Back!</h1>
 <div class= "form">
 <%= form_for :user, :html => {:class => "form-horizontal center"} do |f| %>
 <div class="form-group">
@@ -14,10 +14,12 @@
       <%= f.password_field :password, class: "form-control input-lg" %>
     </div>
 </div>
-<br>
+<div class="form-group clearfix text-center">
   <div class="btn"><%= f.submit "Login", class: "btn btn-primary btn-lg" %>
   </div>
 <% end %>
 </div>
-<br><br><br><br><br><br>
-<h4>Need an account? <%= link_to "Sign up!", "createuser" %> </h4>
+</div>
+
+<h4 class="text-center">Need an account? <%= link_to "Sign up!", "createuser" %> </h4>
+</div>
