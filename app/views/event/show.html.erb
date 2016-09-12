@@ -35,11 +35,12 @@
     <% end %>
   <% end %>
 </ul>
+
+<div id="map">MAP GOES HERE</div>
+
 </div>
 
-<div id="map-container">
-  <div id="map-canvas"></div>
-</div>
+
 
 <% if @user == @event.users[@event.users.length - 1] %>
   <h3> Event Admin </h3>
@@ -78,7 +79,7 @@
       var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 47.6205, lng: 122.3493},
+          center: {lat: 47.6205, lng: -122.3493},
           zoom: 8
         });
       }
