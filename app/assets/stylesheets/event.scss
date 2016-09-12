@@ -1,10 +1,13 @@
-// Place all the styles related to the event controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*
+  ========================================
+  Custom styles
+  ========================================
+*/
   $head-font:'Open Sans', sans-serif;
   $pair-font:'Source Sans Pro', sans-serif;
   $red: #E84B41;
   $offwhite: #F5EEDE; 
+  $sec-black: #272727;
   $black: #262626;
   /*#A43F38*/
 
@@ -12,9 +15,26 @@ h3 {
   text-align: center;
 }
 
+// @mixin linear-gradient($top-color, $bottom-color, $opacity) {
+//     background: -moz-linear-gradient(top, rgba($top-color, $opacity) 0%, rgba($bottom-color, $opacity) 100%); /* FF3.6-15 */
+//     background: -webkit-linear-gradient(top, rgba($top-color, $opacity) 0%, rgba($bottom-color, $opacity) 100%); /* Chrome10-25,Safari5.1-6 */
+//     background: linear-gradient(to bottom, rgba($top-color, $opacity) 0%, rgba($bottom-color, $opacity) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+//     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{ie-hex-str(rgba($top-color, $opacity))}', endColorstr='#{ie-hex-str(rgba($bottom-color, $opacity))}',GradientType=0 ); /* IE6-9 */
+// }
+
+// $color_start: rgba(38,38,38,0);
+// $color_stop:  rgba(38,38,38,1);
+
+/*
+  ========================================
+  All Crawls Page
+  ========================================
+*/
+
 .crawls-well {
-  background-color: $black;
+  background-color: $sec-black;
   margin: 20px 0;
+  // position: relative;
 }
 
 .crawls-well a{
@@ -28,36 +48,88 @@ h3 {
   // border-bottom: 2px solid $red;
  }
 
+ .show-margin{
+  margin-top: 0;
+  margin-bottom: 0;
+ }
+
  .divLast {
-   position: absolute;
-   margin: auto 0;  
-   // padding: 0px 2px 2px 3px;    
+   position: relative;
+   // left: 22px;
+   // right: 15px;  
    border-bottom: 10px $red solid;
-   width: 90%;
+   width: 100%;
 }
 
  .crawls-well h3 {
   text-transform: uppercase;
+  color: $offwhite;
  }
 
   a > .crawls-well > h3:hover {
   text-decoration: none;
  }
 
- .dateTime {
-  display: inline-block;
- }
+  /*
+  ========================================
+  Crawl Detail Page
+  ========================================
+*/
+.headerImg {
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  color: $offwhite;
+  overflow: hidden;
+  margin-bottom: 0;
 
- // Event Detail Page
+  
+  // &:before {
+  //   content: '';
+  // position: absolute;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+  // background-image: linear-gradient(to bottom,rgba(38,38,38,0),rgba(38,38,38,1));
+  // opacity: 1; 
+  // }
+}
 
- .event-detail {
-  border: 2px solid #000;
- }
+#eventTitle {
+  position: absolute;
+  color: white;
+  bottom: 20px;
+  z-index: 99;
+  text-align: center;
+  left: 0;
+  width: 100%
+}
 
- .event-image {
-  width: 100vw;
-  height: 300px;
- }
+
+// #grad1 {
+//     background: -webkit-linear-gradient(bottom, rgba(38,38,38,0), rgba(38, 38, 38, 1)); /* For Safari 5.1 to 6.0 */
+//     background: -o-linear-gradient(bottom, rgba(38,38,38,0), rgba(38, 38, 38, 1)); /* For Opera 11.1 to 12.0 */
+//     background: -moz-linear-gradient(bottom, rgba(38,38,38,0), rgba(38, 38, 38, 1)); /* For Firefox 3.6 to 15 */
+//     background: linear-gradient(to bottom, rgba(38,38,38,0), rgba(38, 38, 38, 1));; /* Standard syntax (must be last) */
+// }
+
+.headerImg img {
+  width: 100%;
+  // height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+/*
+  ========================================
+  Locations
+  ========================================
+*/
+
+.locations {
+  background-color: $black;
+}
 
  
 
