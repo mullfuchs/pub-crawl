@@ -13,21 +13,10 @@ $offwhite: #F5EEDE;
 $sec-black: #333333;
 $black: #262626;
 
-/*#A43F38*/
-// 272727 other black
-
 h3 {
     text-align: center;
 }
 
-// @mixin linear-gradient($top-color, $bottom-color, $opacity) {
-//     background: -moz-linear-gradient(top, rgba($top-color, $opacity) 0%, rgba($bottom-color, $opacity) 100%); /* FF3.6-15 */
-//     background: -webkit-linear-gradient(top, rgba($top-color, $opacity) 0%, rgba($bottom-color, $opacity) 100%); /* Chrome10-25,Safari5.1-6 */
-//     background: linear-gradient(to bottom, rgba($top-color, $opacity) 0%, rgba($bottom-color, $opacity) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-//     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{ie-hex-str(rgba($top-color, $opacity))}', endColorstr='#{ie-hex-str(rgba($bottom-color, $opacity))}',GradientType=0 ); /* IE6-9 */
-// }
-// $color_start: rgba(38,38,38,0);
-// $color_stop:  rgba(38,38,38,1);
 
 /*
   ========================================
@@ -70,8 +59,12 @@ h3 {
     // color: $offwhite;
 }
 
-.show-margin h3 {
+.show-margin h3, .show-margin h4 {
     color: $offwhite;
+}
+
+.show-margin h4 {
+
 }
 
 a > .crawls-well > h3:hover {
