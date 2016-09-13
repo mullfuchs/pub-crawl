@@ -27,8 +27,8 @@ class EventController < ApplicationController
       :time => event_params[:time],
       :image => cloudinary_file['public_id'],
       :location_ids => event_params[:location_ids],
-      :users => [@current_user]
-      :admin => @current_user
+      :users => [@current_user],
+      :admin => @current_user[:id]
     }
     current_event = Event.create(new_event)
     redirect_to event_path(current_event)
@@ -50,7 +50,7 @@ class EventController < ApplicationController
   def show
     @event = Event.find(params[:id])
     if(session[:user_id])
-      @user = User.find(session[:user_id])
+      @user = User.find_by_id(session[:user_id])
     else
       @user = false
     end
