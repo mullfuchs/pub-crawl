@@ -46,7 +46,7 @@
 <br>
 </div>
 
-<% if @user == @event.users[@event.users.length - 1] %>
+<% if @user.id.to_i == @event.admin.to_i %>
 <div class="location">
   <h4>Mark a Location as Visited</h4>
 </div>
@@ -62,7 +62,7 @@
   </div><!-- end div class="row" -->
 </div>
 
-  <% end %>
+<% end %>
 
 <br>
 <div class="container">
