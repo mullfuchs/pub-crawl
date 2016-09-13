@@ -28,6 +28,7 @@ class EventController < ApplicationController
       :image => cloudinary_file['public_id'],
       :location_ids => event_params[:location_ids],
       :users => [@current_user]
+      :admin => @current_user
     }
     current_event = Event.create(new_event)
     redirect_to event_path(current_event)

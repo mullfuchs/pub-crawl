@@ -48,7 +48,7 @@
 
 
 
-<% if @user == @event.users[@event.users.length - 1] %>
+<% if @user == @event.admin %>
   <h3> Event Admin </h3>
   <p>Mark a location as visited</p>
     <% @event.locations.each do |location| %>
