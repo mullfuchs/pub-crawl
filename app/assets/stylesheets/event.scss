@@ -166,6 +166,10 @@ a > .crawls-well > h3:hover {
   margin-right: 5px;
 }
 
+li {
+  list-style: none;
+  display: inline-block;
+}
 /*
   ========================================
   Locations
@@ -184,9 +188,3 @@ a > .crawls-well > h3:hover {
   height: 400px; 
 }
 
-    li {
-      list-style: none;
-      display: inline-block;
-    }
-
-}
