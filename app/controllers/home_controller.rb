@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def index
-    parameters = { term: 'Bars'}
+    parameters = { term: 'bars + beacon hill'}
     @results = Yelp.client.search('Seattle', parameters)
     # render json: results
   end
@@ -9,7 +9,7 @@ class HomeController < ApplicationController
   def new
   end
 
-  def search
+  def self.search(params)
     parameters = { term: 'Bars'}
     @results = Yelp.client.search('Seattle', parameters)
     # render json: results
