@@ -48,7 +48,11 @@ class EventController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    @user = User.find(session[:user_id])
+    if(session[:user_id])
+      @user = User.find(session[:user_id])
+    else
+      @user = false
+    end
 
   end
 
