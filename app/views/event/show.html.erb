@@ -46,16 +46,16 @@
 <br>
 </div>
 
+<% if @user.id.to_i == @event.admin.to_i %>
 
-
-<% if @user == @event.users[@event.users.length - 1] %>
   <h3> Event Admin </h3>
   <p>Mark a location as visited</p>
     <% @event.locations.each do |location| %>
     
-    <li> <%= location.name %> / <%= location.address %> <a href="left/<%= @event.id %>/<%=location.id%>"> Mark as left </a></li>
+    <li> <%= location.name %> / <%= location.address %> <a href="left/<%= @event.id %>/<%=location.id%>"> Mark as left </a>
+    </li>
 
-  <% end %>
+<% end %>
 
 <br>
 <div class="container">
