@@ -26,7 +26,11 @@
       <li><img src="<%= image_path('pub-crawl-icon3.png') %>" class="user-join"><%= user.username %> </li>
     <% end %>
   </ul>
-  <button id="join-button"><a href="join/<%=@event.id%>">Join</a></button>
+  <% if @user %>
+    <button id="join-button"><a href="join/<%=@event.id%>">Join</a></button>
+  <% else %>
+    <button id="join-button"><a href="../login">Log in to join</a></button>
+  <% end %>
 <h3>Locations:</h3>
 <ul>
   <% @event.locations.each do |location| %>
