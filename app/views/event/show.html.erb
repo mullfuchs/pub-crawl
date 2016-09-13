@@ -57,9 +57,9 @@
 
   <% end %>
 
+<br>
 <div class="container">
-  <h4>Add a Stop To This Crawl</h4>
-<div class= "form">
+<div class= "form collapse" id="form">
   <%= form_for :location, :html => {:class => "form-horizontal center"} do |f| %>
     <div class="form-group">
       <div class="col-md-8">
@@ -87,13 +87,17 @@
       </div>
     </div>
   
-    <div class="button"><%= f.submit "Add Stop", class: "btn btn-primary btn-lg" %>
+    <div><%= f.submit "Add", class: "btn btn-primary btn-lg", id: "button" %>
   <% end %>
   </div>
 
 <% end %>
-
 </div>
+<br><br>
+<a class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#form">Add a Stop</a>
+
+<br>
+<br>
 <!-- 
 <div class="btn btn-danger" href="delete/<%=@event.id%>"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> NUKE THIS CRAWL <span class="glyphicon glyphicon-fire" aria-hidden="true"></span></div>
  -->
