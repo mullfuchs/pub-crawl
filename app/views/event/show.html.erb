@@ -1,0 +1,148 @@
+
+
+<div class="headerImg">
+  <h1 id="eventTitle" class="text-center"><%= @event.name %></h1>
+    <div><%= cl_image_tag(@event.image)%></div>
+</div>
+<!-- <div class="container-fluid"> -->
+<div class="container-fluid crawls-well show-margin">
+  <div class="row">
+    <div class="col-xs-8">
+  <h3 id="eventDate" class="text-left"><%= @event.date %></h3>
+</div> <!-- end div class="col-xs-8" -->
+  <div class="col-xs-4">
+    <h3 id="eventTime"><%= @event.time %></h3>
+  </div><!-- end div class="col-xs-4" -->
+  </div><!-- end div class="row" -->
+    <div class='divLast'>
+    </div>
+</div>
+<!-- </div> -->
+<div class="container-fluid locations">
+<h3>Crwlers</h3>
+  <ul>
+    <% @event.users.each do |user| %>
+
+      <li><img src="<%= image_path('pub-crawl-icon3.png') %>" class="user-join"><%= user.username %> </li>
+    <% end %>
+  </ul>
+  <% if @user %>
+    <button id="join-button"><a href="join/<%=@event.id%>">Join</a></button>
+  <% else %>
+    <button id="join-button"><a href="../login">Log in to join</a></button>
+  <% end %>
+<h3>Locations:</h3>
+<ul>
+  <% @event.locations.each do |location| %>
+    <% if !location.has_been_visited %>
+      <li> <%= location.name %> / <%= location.address %> /Arrive: <%= location.arrivetime %> /Leave <%= location.departtime %> </li>
+    <% else %>
+      <li> <strike> <%= location.name %> / <%= location.address %> /Arrive: <%= location.arrivetime %> /Leave <%= location.departtime %> </strike> </li>
+    <% end %>
+  <% end %>
+</ul>
+
+<div id="map">MAP GOES HERE</div>
+<br>
+</div>
+
+<% if @user.id.to_i == @event.admin.to_i %>
+
+  <h3> Event Admin </h3>
+  <p>Mark a location as visited</p>
+    <% @event.locations.each do |location| %>
+    
+    <li> <%= location.name %> / <%= location.address %> <a href="left/<%= @event.id %>/<%=location.id%>"> Mark as left </a>
+    </li>
+
+<% end %>
+
+<br>
+<div class="container">
+<div class= "form collapse" id="form">
+  <%= form_for :location, :html => {:class => "form-horizontal center"} do |f| %>
+    <div class="form-group">
+      <div class="col-md-8">
+        <%= f.text_field :name, placeholder: "What's this place called?", class: "form-control input-lg" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-8">
+        <%= f.text_field :address, placeholder: "What's the address", class: "form-control input-lg" %>
+      </div>
+    </div>
+    <div class="form-group">  
+      <div class="col-md-8">
+        <%= f.text_field :arrivetime, placeholder: "Enter a start time", class: "form-control input-lg" %>
+      </div>
+    </div> 
+    <div class="form-group">
+      <div class="col-md-8">
+        <%= f.text_field :latitude, placeholder: "Lat (approx)", class: "form-control input-lg" %>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-8">
+        <%= f.text_field :longitude, placeholder: "Long (approx)", class: "form-control input-lg" %>
+      </div>
+    </div>
+  
+    <div><%= f.submit "Add", class: "btn btn-primary btn-lg", id: "button" %>
+  <% end %>
+  </div>
+
+<% end %>
+</div>
+<br><br>
+<a class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#form">Add a Stop</a>
+
+<br>
+<br>
+<!-- 
+<div class="btn btn-danger" href="delete/<%=@event.id%>"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span> NUKE THIS CRAWL <span class="glyphicon glyphicon-fire" aria-hidden="true"></span></div>
+ -->
+
+<script src="<%=@map_url%>" async defer></script>
+
+<script>
+var el = $('#map');
+var map;
+
+function enableScrollingWithMouseWheel() {
+    map.setOptions({ scrollwheel: true });
+}
+
+function disableScrollingWithMouseWheel() {
+    map.setOptions({ scrollwheel: false });
+}
+
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 47.6062100, lng: -122.3320710},
+    zoom: 11,
+    scrollwheel: false,
+    draggable: false
+  });
+
+    google.maps.event.addListener(map, 'mousedown', function(){
+        enableScrollingWithMouseWheel()
+    });
+
+}
+
+// // google.maps.event.addDomListener(window, 'load', initMap);
+
+// $('body').on('mousedown', function(event) {
+//     var clickedInsideMap = $(event.target).parents('#map').length > 0;
+
+//     if(!clickedInsideMap) {
+//         disableScrollingWithMouseWheel();
+//     }
+// });
+
+// $(window).scroll(function() {
+//     disableScrollingWithMouseWheel();
+// });
+
+</script>

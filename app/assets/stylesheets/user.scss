@@ -1,3 +1,24 @@
 // Place all the styles related to the user controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+  @import "bootstrap-sprockets";
+  @import "bootstrap";
+
+/*.form-group {
+    max-width: 80%;
+  }*/
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+h1 {
+  text-align: center;
+}
+
+.form {
+  margin: 0 auto;
+  max-width: 80%;
+}
+.btn {
+  float: right !important;
+}
