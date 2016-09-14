@@ -36,5 +36,6 @@ https://drive.google.com/open?id=0B0MmKlLqm-ywS1p5QjdtWllTaHc
 [CRWL](http://wdi-pub-crawl.herokuapp.com/)
 
 ## Additional Updates to Be Made
+
 * Incorporate Google Places Autocomplete API to provide a search bar to make additions to pub crawl list
 * Add a profile page to show crawls attending and crawls hosting
