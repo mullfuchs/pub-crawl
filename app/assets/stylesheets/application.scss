@@ -49,31 +49,59 @@ body {
     font-family: $pair-font;
 }
 
-h1,
-h2,
-h3 {
-    font-family: $head-font;
-    font-weight: 600;
+ h1, h2, h3, h4 {
+  font-family: $head-font;
+  font-weight: 600;
+ }
+h4 {
+  margin: 0;
+  color: $red;
+  background-color: $black;
 }
+ p {
+  margin: 20px;
+ }
 
-p {
-    font-family: $pair-font;
-    margin: 20px;
-}
 
-.btn {
+.btn-lg {
     text-align: center;
     background-color: $red;
     border: white;
     float: none !important;
     width: 200px;
 }
+.btn-sm {
+    text-align: center;
+    background-color: $red;
+    border: white;
+    color: white;
+}
+.btn-md {
+    text-align: center;
+    background-color: $red;
+    border: white;
+    color: white;
+}
 
 #button {
     text-align: center;
     margin: 0 auto;
 }
+<<<<<<< HEAD
 
+=======
+.addButton {
+  text-align: center;
+}
+#nuke {
+  width: 100%;
+}
+#form {
+  border: 3px solid $black;
+  border-radius: 10px;
+  padding: 10px;
+}
+>>>>>>> 82b81fbd95350152ecd358eda2abfc7d51b981c1
 
 /*
   ========================================
@@ -147,8 +175,13 @@ p {
     // margin: 20px 60px;
 }
 
+<<<<<<< HEAD
 .well .btn {
     background-color: $black;
+=======
+.well .butt {
+  background-color: $black !important;
+>>>>>>> 82b81fbd95350152ecd358eda2abfc7d51b981c1
 }
 
 .form-input {
