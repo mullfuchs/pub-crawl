@@ -1,2 +1,12 @@
-<h1>User#show</h1>
-<p></p>
+<h1>Featured Locations</h1>
+
+<ul>
+  <% @results.businesses.each do |business| %>
+    <h2><%= business.name %></h2>
+    <% business.location.display_address.each do |address| %>
+      <p><%= address %></p>
+    <% end %>
+    <p>Rating <%= business.rating %></p>
+    <p>Phone <%= business.display_phone %></p>
+  <% end %>
+</ul>
