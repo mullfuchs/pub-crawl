@@ -38,6 +38,8 @@ Rails.application.routes.draw do
 
   get "event/delete/:id" => "event#delete"
 
+  get "featured" => "user#show"
+
   get "event/left/:event_id/:loc_id" => "event#leavelocation"
 
 
