@@ -81,6 +81,18 @@ h4 {
   text-align: center;
   margin: 0 auto;
 }
+.addButton {
+  text-align: center;
+}
+#nuke {
+  width: 100%;
+}
+#form {
+  border: 3px solid $black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
 /*
   ========================================
   Navigation
@@ -152,8 +164,8 @@ h4 {
   // margin: 20px 60px;
 }
 
-.well .btn {
-  background-color: $black;
+.well .butt {
+  background-color: $black !important;
 }
 
 .form-input {
