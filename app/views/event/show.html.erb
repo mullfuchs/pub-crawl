@@ -47,7 +47,7 @@
 <br>
 </div>
 
-<% if @user.id.to_i == @event.admin.to_i %>
+<% if @user && @user.id.to_i == @event.admin.to_i %>
 
   <h3> Event Admin </h3>
   <p>Mark a location as visited</p>
