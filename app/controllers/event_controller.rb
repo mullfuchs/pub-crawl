@@ -6,6 +6,8 @@ class EventController < ApplicationController
 
   def index
     @events = Event.all
+
+    # @event = Event.find(params[:id])
   end
 
   def new
