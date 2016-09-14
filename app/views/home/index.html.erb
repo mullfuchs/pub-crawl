@@ -1,27 +1,30 @@
-<!-- 
-<a href='/login'> log in </a>
-<<<<<<< HEAD
-<a href='/logout'> log off </a>
-=======
-<a href='/logout'> log off </a>
-<a href='/createuser'> create account </a> -->
 
 <div class="jumbotron">
-<div class="container text-center">
-  
+  <div class="container text-center">
+    
 
-  <h1 class="display-3">CRWL</h1>
-  <img src="<%= image_path('pub-crawl-icon3.png') %>">
+    <h1 class="display-3">CRWL</h1>
+    <img src="<%= image_path('pub-crawl-icon3.png') %>">
 
 
-  <h2>Let’s get ready to stumble!</h2>
+    <h2>Let’s get ready to stumble!</h2>
 
-  <p class="lead text-center">
-    <a class="btn btn-primary btn-lg" href="/crawls" role="button">See Crawls</a>
-  </p>
+    <p class="lead text-center">
+      <a class="btn btn-primary btn-lg" href="/crawls" role="button">See Crawls</a>
+    </p>
+  </div>
 </div>
 
-</div>
+<ul>
+  <% @results.businesses.each do |business| %>
+    <h2><%= business.name %></h2>
+    <% business.location.display_address.each do |address| %>
+      <p><%= address %></p>
+    <% end %>
+    <p>Rating <%= business.rating %></p>
+    <p>Phone <%= business.display_phone %></p>
+  <% end %>
+</ul>
 
 <!-- :class => 'img-responsive' -->
 

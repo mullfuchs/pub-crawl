@@ -2,9 +2,10 @@
 
 <div class="headerImg">
   <h1 id="eventTitle" class="text-center"><%= @event.name %></h1>
-  <div><%= cl_image_tag(@event.image)%></div>
+    <div><%= cl_image_tag(@event.image)%></div>
 </div>
 <div class="container-fluid crawls-well show-margin">
+
 <div class="row">
 <div class="col-xs-8">
 <h4 class="text-left date-format eventDate"><%= @event.date %></h4>
@@ -15,6 +16,7 @@
 </div><!-- end div class="row" -->
 <div class='divLast'>
 </div>
+
 </div>
 
 <div class="container-fluid locations">
