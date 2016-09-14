@@ -1,6 +1,5 @@
 class UserController < ApplicationController
   def new
-
   end
 
   def create
@@ -27,6 +26,8 @@ class UserController < ApplicationController
   end
 
   def show
+    parameters = { term: 'bars'}
+    @results = Yelp.client.search('Seattle', parameters)
   end
 
   private
