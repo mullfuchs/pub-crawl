@@ -1,24 +1,30 @@
-# README
+# CRWL
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## About
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+## Getting Started
 
-* Configuration
+* Fork and clone this repository. 
 
-* Database creation
+## Technologies Used
 
-* Database initialization
+    * HTML
+    * CSS/SCSS
+    * Bootstrap
+    * JavaScript
+    * jQuery
+    * Ruby on Rails
+    * ERB
+    * Cloudinary
+    * Google Maps API
+    * Moment JS
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Demo
+[CRWL](http://wdi-pub-crawl.herokuapp.com/)
 
-* Deployment instructions
-
-* ...
+## Additional Updates to Be Made
+* Incorporate Google Places Autocomplete API to provide a search bar to make additions to pub crawl list
+* Add a profile page to show crawls attending and crawls hosting
