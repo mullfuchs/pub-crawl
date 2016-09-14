@@ -13,6 +13,10 @@ $offwhite: #F5EEDE;
 $sec-black: #333333;
 $black: #262626;
 
+h1 {
+  margin-top: 10px;
+}
+
 h3 {
     text-align: center;
 }
@@ -28,6 +32,10 @@ h3 {
     background-color: $black;
     margin: 20px 0;
     // position: relative;
+}
+
+.crawls-well-all {
+  background-color: $sec-black;
 }
 
 .crawls-well a {
@@ -47,9 +55,7 @@ h3 {
 }
 
 .divLast {
-    position: relative;
-    // left: 22px;
-    // right: 15px;  
+    position: relative; 
     border-bottom: 10px $red solid;
     width: 100%;
 }
@@ -69,6 +75,18 @@ h3 {
 
 a > .crawls-well > h3:hover {
     text-decoration: none;
+}
+
+.all-crawl-img {
+  height: 180px;
+
+}
+
+.all-row {
+  // position: absolute;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  z-index: 10;
 }
 
 

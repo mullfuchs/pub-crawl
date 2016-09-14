@@ -1,8 +1,12 @@
-<h1>CRAWLS</h1>
+<!-- <h1>CRAWLS</h1> -->
 
 <% @events.each do |event| %>
+<div class="event-listing">
+<div class="headerImg all-crawl-img">
+  <div><%= cl_image_tag(event.image)%></div>
+</div>
 
-<a href="/event/<%=event.id%>"><div class="container crawls-well">
+<a href="/event/<%=event.id%>"><div class="container-fluid crawls-well all-row">
 
 <a href="/event/<%=event.id%>" class="event-btn">
 <div class="row">
@@ -20,9 +24,10 @@
 </div>
 </div></a>
 
-
+</div>
 <% end %>
 
 </div>
+
 
 
