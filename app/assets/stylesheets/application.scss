@@ -13,36 +13,41 @@
 *= require global
 *= require_tree .
 *= require_self
+*= require font-awesome
 */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 /*
   ========================================
   Custom styles
   ========================================
 */
- * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
 }
 
-  @import "bootstrap-sprockets";
-  @import "bootstrap";
+$head-font:'Open Sans',
+sans-serif;
+$pair-font:'Source Sans Pro',
+sans-serif;
+$red: #E84B41;
+$offwhite: #F5EEDE;
+$black: #262626;
 
-  $head-font:'Open Sans', sans-serif;
-  $pair-font:'Source Sans Pro', sans-serif;
-  $red: #E84B41;
-  $offwhite: #F5EEDE; 
-  $black: #262626;
-  /*#A43F38*/
+/*#A43F38*/
 
- body {
-  background-color:  $offwhite;
-  height: 100%;
-  font-family: $pair-font;
-
- }
+body {
+    background-color: $offwhite;
+    height: 100%;
+    font-family: $pair-font;
+}
 
  h1, h2, h3, h4 {
   font-family: $head-font;
@@ -56,6 +61,7 @@ h4 {
  p {
   margin: 20px;
  }
+
 
 .btn-lg {
     text-align: center;
@@ -78,9 +84,12 @@ h4 {
 }
 
 #button {
-  text-align: center;
-  margin: 0 auto;
+    text-align: center;
+    margin: 0 auto;
 }
+<<<<<<< HEAD
+
+=======
 .addButton {
   text-align: center;
 }
@@ -92,6 +101,7 @@ h4 {
   border-radius: 10px;
   padding: 10px;
 }
+>>>>>>> 82b81fbd95350152ecd358eda2abfc7d51b981c1
 
 /*
   ========================================
@@ -99,46 +109,47 @@ h4 {
   ========================================
 */
 
-  .navbar {
+.navbar {
     margin-bottom: 0;
-  }
+}
 
-  .navbar-default {
+.navbar-default {
     background-color: $black;
     color: $red;
-  }
+}
 
-  .navbar-brand, .icon-bar, .sr-only {
+.navbar-brand,
+.icon-bar,
+.sr-only {
     color: $red;
-/*    background-color: #E84B41*/
-  }
+    /*    background-color: #E84B41*/
+}
 
-  .navbar-default .navbar-brand {
-        color: $red;
-        font-family: $head-font;
-        font-size: 36px;
-  }
+.navbar-default .navbar-brand {
+    color: $red;
+    font-family: $head-font;
+    font-size: 36px;
+}
 
-  .navbar-nav li {
-      text-align: center;
-    }
+.navbar-nav li {
+    text-align: center;
+}
 
-  .navbar-default .navbar-nav li a {
-        color: $red;
-        font-size: 16px;
-      }
+.navbar-default .navbar-nav li a {
+    color: $red;
+    font-size: 16px;
+}
 
-  .navbar-default .navbar-toggle {
+.navbar-default .navbar-toggle {
     border-color: $red;
-  }
+}
 
-  .navbar-default .navbar-toggle .icon-bar {
+.navbar-default .navbar-toggle .icon-bar {
     background-color: $red;
-  }
+}
 
 
-
-  /*
+/*
   ========================================
   Home Page
   ========================================
@@ -155,20 +166,24 @@ h4 {
 }
 
 .jumbotron img {
-  height: 215px;
-  margin: 10px;
+    height: 215px;
+    margin: 10px;
 }
 
 .well {
-  background-color: #E84B41;
-  // margin: 20px 60px;
+    background-color: #E84B41;
+    // margin: 20px 60px;
 }
 
+<<<<<<< HEAD
+.well .btn {
+    background-color: $black;
+=======
 .well .butt {
   background-color: $black !important;
+>>>>>>> 82b81fbd95350152ecd358eda2abfc7d51b981c1
 }
 
 .form-input {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
-

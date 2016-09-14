@@ -12,9 +12,33 @@ $red: #E84B41;
 $offwhite: #F5EEDE;
 $sec-black: #333333;
 $black: #262626;
+h1 {
+    margin-top: 10px;
+}
 
 h3 {
     text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.links {
+    height: 40px;
+    background-color: $red;
+    margin: auto 0;
+}
+
+a .links {
+    color: $offwhite;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a .links:hover {
+    color: $offwhite;
+    text-decoration: none;
 }
 
 
@@ -28,6 +52,10 @@ h3 {
     background-color: $black;
     margin: 20px 0;
     // position: relative;
+}
+
+.crawls-well-all {
+    background-color: $sec-black;
 }
 
 .crawls-well a {
@@ -48,8 +76,6 @@ h3 {
 
 .divLast {
     position: relative;
-    // left: 22px;
-    // right: 15px;  
     border-bottom: 10px $red solid;
     width: 100%;
 }
@@ -59,16 +85,27 @@ h3 {
     // color: $offwhite;
 }
 
-.show-margin h3, .show-margin h4 {
+.show-margin h3,
+.show-margin h4 {
     color: $offwhite;
 }
 
-.show-margin h4 {
-
-}
+.show-margin h4 {}
 
 a > .crawls-well > h3:hover {
     text-decoration: none;
+}
+
+.all-crawl-img {
+    height: 180px;
+}
+
+.all-row {
+    // position: absolute;
+    color: $offwhite;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    z-index: 10;
 }
 
 
@@ -117,7 +154,6 @@ a > .crawls-well > h3:hover {
     text-transform: uppercase;
 }
 
-
 #join-button {
     display: block;
     margin: 0 auto;
@@ -141,16 +177,25 @@ a > .crawls-well > h3:hover {
     }
 }
 
+<<<<<<< HEAD
+// #join-button:hover {
+//     background-color: $red;
+//     color: $offwhite;
+// }
+=======
+>>>>>>> 82b81fbd95350152ecd358eda2abfc7d51b981c1
 .user-join {
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
 }
 
 li {
-  list-style: none;
-  display: inline-block;
+    list-style: none;
+    display: inline-block;
 }
+
+
 /*
   ========================================
   Locations
@@ -160,17 +205,14 @@ li {
 .locations {
     background-color: $black;
     color: $offwhite;
-
     li {
-      list-style: none;
-      display: inline-block;
+        list-style: none;
+        display: inline-block;
     }
-
-    }
-    
-#map { 
-  margin: 10px, 10px;
-  width: 100%;
-  height: 400px; 
 }
 
+#map {
+    margin: 10px, 10px;
+    width: 100%;
+    height: 400px;
+}
