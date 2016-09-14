@@ -1,5 +1,4 @@
 <h1>CRAWLS</h1>
-<div class="container-fluid">
 
 <% @events.each do |event| %>
 
@@ -12,8 +11,8 @@
 </div>
 <div class="col-xs-4">
 <!-- <i class="fa fa-calendar" aria-hidden="true"></i> -->
-<h4 class= "text-right" id="eventDate"><%=event.date%></h4>
-<h4 class= "text-right" id="eventTime"><%= event.time %> </h4>
+<h4 class= "text-right date-format eventDate" id="eventDate"><%=event.date%></h4>
+<h4 class= "text-right date-format eventTime" id="eventTime"><%= event.time %> </h4>
 </div>
 
 </div> <!-- end div class="row" -->

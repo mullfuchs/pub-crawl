@@ -13,21 +13,10 @@ $offwhite: #F5EEDE;
 $sec-black: #333333;
 $black: #262626;
 
-/*#A43F38*/
-// 272727 other black
-
 h3 {
     text-align: center;
 }
 
-// @mixin linear-gradient($top-color, $bottom-color, $opacity) {
-//     background: -moz-linear-gradient(top, rgba($top-color, $opacity) 0%, rgba($bottom-color, $opacity) 100%); /* FF3.6-15 */
-//     background: -webkit-linear-gradient(top, rgba($top-color, $opacity) 0%, rgba($bottom-color, $opacity) 100%); /* Chrome10-25,Safari5.1-6 */
-//     background: linear-gradient(to bottom, rgba($top-color, $opacity) 0%, rgba($bottom-color, $opacity) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-//     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{ie-hex-str(rgba($top-color, $opacity))}', endColorstr='#{ie-hex-str(rgba($bottom-color, $opacity))}',GradientType=0 ); /* IE6-9 */
-// }
-// $color_start: rgba(38,38,38,0);
-// $color_stop:  rgba(38,38,38,1);
 
 /*
   ========================================
@@ -70,8 +59,12 @@ h3 {
     // color: $offwhite;
 }
 
-.show-margin h3 {
+.show-margin h3, .show-margin h4 {
     color: $offwhite;
+}
+
+.show-margin h4 {
+
 }
 
 a > .crawls-well > h3:hover {
@@ -88,6 +81,7 @@ a > .crawls-well > h3:hover {
 .headerImg {
     position: relative;
     width: 100%;
+    // height: 300px;
     background-size: cover;
     color: $offwhite;
     overflow: hidden;
@@ -100,9 +94,16 @@ a > .crawls-well > h3:hover {
         bottom: 0;
         left: 0;
         background-image: linear-gradient(to bottom, rgba(38, 38, 38, 0), rgba(38, 38, 38, 1));
-        // background-image: linear-gradient(to bottom, rgba(38, 38, 38, 0) 0, #262626 100%);
         opacity: 1;
     }
+}
+
+.headerImg img {
+    width: 100%;
+    // height: 300px;
+    overflow: hidden;
+    position: relative;
+    // object-fit: cover;
 }
 
 #eventTitle {
@@ -116,18 +117,6 @@ a > .crawls-well > h3:hover {
     text-transform: uppercase;
 }
 
-// #grad1 {
-//     background: -webkit-linear-gradient(bottom, rgba(38,38,38,0), rgba(38, 38, 38, 1)); /* For Safari 5.1 to 6.0 */
-//     background: -o-linear-gradient(bottom, rgba(38,38,38,0), rgba(38, 38, 38, 1)); /* For Opera 11.1 to 12.0 */
-//     background: -moz-linear-gradient(bottom, rgba(38,38,38,0), rgba(38, 38, 38, 1)); /* For Firefox 3.6 to 15 */
-//     background: linear-gradient(to bottom, rgba(38,38,38,0), rgba(38, 38, 38, 1));; /* Standard syntax (must be last) */
-// }
-.headerImg img {
-    width: 100%;
-    // height: 300px;
-    overflow: hidden;
-    position: relative;
-}
 
 #join-button {
     display: block;
@@ -180,14 +169,16 @@ li {
     background-color: $black;
     color: $offwhite;
 
-}
+    li {
+      list-style: none;
+      display: inline-block;
+    }
 
+    }
+    
 #map { 
   margin: 10px, 10px;
   width: 100%;
   height: 400px; 
 }
-    li {
-      list-style: none;
-      display: inline-block;
-    }
+
