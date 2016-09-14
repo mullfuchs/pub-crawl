@@ -49,7 +49,7 @@
 
 <% if @user.id.to_i == @event.admin.to_i %>
 <div class="location">
-  <h4>Mark a Location as Visited</h4>
+  <h4 id="visited">Mark a Location as Visited</h4>
 </div>
     <% @event.locations.each do |location| %>
 <div class="crawls-well show-margin">
